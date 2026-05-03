@@ -1,0 +1,14 @@
+
+{% extends "master/base.html" %}
+
+{% block content %}
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{task_data.title}}</h5>
+    <p class="card-text">{{task_data.description}}</p>
+    <a href="#" class="card-link">{{task_data.status}}</a>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,52 @@
+{% extends 'master/base.html' %}
+
+
+{% block content %}
+
+{% if messages %}
+
+
+{% for i in messages  %}
+<p>{{i}}</p>
+    
+{% endfor %}
+    
+    
+{% endif %}
+    
+
+<h1>Product list</h1>
+
+<a href="" class="btn btn-primary">add product</a>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>sl</th>
+        <th>name</th>
+        <th>price</th>
+        <th>qty</th>
+        <th>total amount</th>
+        <th>action</th>
+
+    </tr>
+</thead>
+<tbody>
+    
+    {% for product in product_data  %}
+
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.qty}}</td>
+        <td>{{product.total_amount}}</td>
+        <td></td>
+    </tr>
+        
+    {% endfor %}
+        
+</tbody>
+</table>
+    
+{% endblock content %}
+    
